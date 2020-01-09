@@ -1,0 +1,39 @@
+INSTALLATION:
+
+Quick way to install music genie with Java 1.3:
+
+- Install Java1.3 by running the .exe in the Java1.3 folder
+- Copy the Build folder to wherever you want it to go
+- Change the filepath in Build/MusicGenie.bat to where its installed
+- Run MusicGenie.bat
+
+(takes about 30 seconds :)  )
+
+CF 20/2/2001
+
+
+
+
+-----
+Update: 2004-08-01
+Just noticed a problem with Sun's new Java 1.4: when you click Edit to
+open the editor, the window may be blank.  You can fix this by double-clicking
+the title bar (to resize the window) which forces it to redraw.
+This bug is due to Sun changing the behavior of Java since I wrote the code!
+I recommend using Java 1.3 as supplied with MusicGenie, as this is the 
+verzion of Java that MusicGenie was designed for!
+
+DEMOS
+Some of them are in MusicGenie .gen format, which you can load from the file menu; others are saved as text files which you can cut and paste into the editor.
+
+SOURCE CODE
+Note- this project is not officially open-source (yet), however if you would like to play with the code or make improvements please get in touch and I'll probably be happy to help and get involved.   I am very open to ideas.  
+
+USE & COMPOSITIONS
+Similarly, I still have copyright over the application, so please ask if you would like permission to use it.  I will almost certainly grant it to you (unless you are some massive profit-making record company who wants to use MusicGenie to churn out million dollar Gaeth Gates hits without giving me any of the cash), I just enjoy the ego boost of hearing from people who like it, instead of just impersonally downloading it without any human contact.  You are not licenced to use it without asking.  Please let me know if you do anything cool with it, and please credit me if you perform or release any compositions that you create with it.  Basically, get in touch and be excellent to each other :)  
+
+charles.fox@cantab.net
+
+
+
+

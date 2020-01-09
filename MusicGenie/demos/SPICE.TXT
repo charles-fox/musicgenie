@@ -1,0 +1,15 @@
+A => {NOTE}
+C => {NOTE}
+dd => {(~3)(@5/4)A, A}
+tail => {(^-2)(~3/2)(@5/4)A, (~3/2)(^-2)A, (^-2#-1)A}
+riff => {dd, (^3)dd, (^4)dd, tail}
+2riffs => {riff, riff}
+riffphrase => {($6)(&6)2riffs}
+ifyouwanna => {(@5/4)(^5)C, (^5)C, (^5)C, (^5)C}
+bemylover => {(@5/4)(^5)C, (^6)C, (^5)C, (~4)(^3)C}
+youhavegottoknow => {(@5/4)(^2)C, C, (^2)C, C, (^3)(~3)C}
+lineA => {(~1/2)ifyouwanna, bemylover, youhavegottoknow}
+thatsthewayitis => {(@5/4)(^8)(~1)C, (^8)C, (^9)C, (^5)C, (^6)(~2)C, (^5)(~2)C}
+lineB => {(~1/2)ifyouwanna, bemylover, thatsthewayitis}
+verse => {lineA, lineB, lineA, lineB}
+song => {riffphrase, (v1)(^8)verse, riffphrase}

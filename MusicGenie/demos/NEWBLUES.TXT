@@ -1,0 +1,17 @@
+a => NOTE
+tail => {(^2)a, (^5)a}
+b => {a, tail}
+c => {b, b, tail}
+d => {c, c}
+e => {(^5)a, (^3)a, (^-2)a, a}
+f => {e, e, e, e}
+g => [d, (v5)f]
+h => {(v3)(^8)NOTE}
+i => {h, (~2)(^2)h, (^3)h}
+i2 => {h, (~2)(^4)h, (^3)h}
+ii => {i, i2}
+ir => {ii, (^3)i, (R)i}
+main => [ir, g]
+bk => {(&2)g}
+w => {main, bk, main, (&3)bk, main}
+blues => {main, main, (&4)main, main, (&5)main, (&4)main, main, (&5)main}

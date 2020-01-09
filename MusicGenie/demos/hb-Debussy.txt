@@ -1,0 +1,16 @@
+a => {NOTE, NOTE}
+m => {(~2)NOTE}
+s => {(~2)m}
+dadeda => {(^2)a, (^3)(~2)a, (^2)(~2)a}
+one => {s, dadeda}
+two => {a, (^3)a, (^2)a, (^2)a, (~4)a}
+verse => {(^-7)one, two}
+2u => {(^-1)s}
+hb => {(R)verse, one}
+hb2u => {hb, 2u}
+2hb2u => {hb, (^2)2u}
+2lines => {hb2u, 2hb2u}
+middle => {(^-4)a, one, (~2)two}
+last => {(^3)m, (@3/4)m, (^2)m, m}
+jesus => {verse, verse, last, verse}
+h => [jesus, (^3)(v2)jesus]

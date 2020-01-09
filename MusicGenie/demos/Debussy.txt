@@ -1,0 +1,16 @@
+a => {NOTE}
+1 => {(^5)NOTE}
+ddd => {a,a,a}
+dadeda => {(^2)a, (^3)(~2)a, (^2)(~2)a}
+one => {ddd, dadeda}
+two => {a, (^3)a, (^2)a, (^2)a, (~4)a}
+verse => {one, two}
+2 => {1, 1}
+22 => {2,2}
+3 => {(^-4)1, (^-4)1}
+5a => {1, (^-2)1, (^-3)1}
+5b => {(^-4)1, (^-5)(~2)1}
+5 => {5a, 5b}
+chorus => {22, (~2)3, 5}
+jesus => {verse, verse, chorus, verse}
+h => [jesus, (^3)(v2)jesus]
