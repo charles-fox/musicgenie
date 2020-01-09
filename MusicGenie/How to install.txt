@@ -26,14 +26,6 @@ verzion of Java that MusicGenie was designed for!
 DEMOS
 Some of them are in MusicGenie .gen format, which you can load from the file menu; others are saved as text files which you can cut and paste into the editor.
 
-SOURCE CODE
-Note- this project is not officially open-source (yet), however if you would like to play with the code or make improvements please get in touch and I'll probably be happy to help and get involved.   I am very open to ideas.  
-
-USE & COMPOSITIONS
-Similarly, I still have copyright over the application, so please ask if you would like permission to use it.  I will almost certainly grant it to you (unless you are some massive profit-making record company who wants to use MusicGenie to churn out million dollar Gaeth Gates hits without giving me any of the cash), I just enjoy the ego boost of hearing from people who like it, instead of just impersonally downloading it without any human contact.  You are not licenced to use it without asking.  Please let me know if you do anything cool with it, and please credit me if you perform or release any compositions that you create with it.  Basically, get in touch and be excellent to each other :)  
-
-charles.fox@cantab.net
-
 
 
 
