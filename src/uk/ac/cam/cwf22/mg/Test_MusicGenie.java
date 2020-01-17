@@ -13,7 +13,7 @@ import java.util.*;
 import java.awt.event.*;
 
 
-public class Test
+public class Test_MusicGenie
 {
 	/**
 	 * The main entry point for the TEST application. 
