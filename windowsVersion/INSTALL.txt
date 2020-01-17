@@ -1,3 +1,7 @@
+This folder contains a windows95 build.
+
+
+
 INSTALLATION:
 
 Quick way to install music genie with Java 1.3:
