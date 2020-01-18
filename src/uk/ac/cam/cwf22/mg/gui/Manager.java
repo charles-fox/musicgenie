@@ -538,8 +538,11 @@ public class Manager
 		String dir = System.getProperty("user.dir");
 		String sep = System.getProperty("file.separator");
 		
-		String path = dir+"\\uk\\ac\\cam\\cwf22\\mg\\default\\";
+		String path = dir+sep+"build"+sep+"uk"+sep+"ac"+sep+"cam"+sep+"cwf22"+sep+"mg"+sep+"default"+sep;
 		
+		System.out.println("path is: "+path);
+
+
 		Genome result = loadGenome(fileName, path);
 		
 		return result;
