@@ -24,7 +24,7 @@ public class Test_MusicGenie
 	public static void main (String[] args) throws Exception
 	{
 		//create test wrapper
-		Test t = new Test();
+		Test_MusicGenie t = new Test_MusicGenie();
 		
 		Degree d = new Degree("5bb#b");
 		p(""+d);
@@ -82,7 +82,7 @@ public class Test_MusicGenie
 	
 	/** wrapper to provide OK button at the end of th etest
 	 */
-	public Test() {
+	public Test_MusicGenie() {
 		Frame f = new Frame("Test complete");
 		Button OK = new Button("Exit");	
 		f.add(OK);
