@@ -564,10 +564,7 @@ public class Manager
 	 */
 	private Genome loadGenome(String fileName, String directory) throws Exception
 	{	
-		ObjectInputStream in = new ObjectInputStream(
-									 new FileInputStream(
-										directory+fileName+".gen"));
-			
+		ObjectInputStream in = new ObjectInputStream(new FileInputStream(directory+fileName+".gen"));
 		Genome result = (Genome)in.readObject();
 		return result;			
 	}
