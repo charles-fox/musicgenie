@@ -1,3 +1,6 @@
+#sudo apt-get install default-jdk
+#openjdk9 does not work, awt button add is broken, see Tests
+
 JFLAGS = -g -d build/ -classpath build/
 JC = javac $(JFLAGS)
 MG = src/uk/ac/cam/cwf22/mg/

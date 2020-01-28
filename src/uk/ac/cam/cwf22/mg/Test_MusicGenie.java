@@ -5,13 +5,12 @@ package uk.ac.cam.cwf22.mg;
  */
 
 import uk.ac.cam.cwf22.mg.core.*;
-
+import uk.ac.cam.cwf22.mg.compiler.*;
 import uk.ac.cam.cwf22.mg.gui.*;
 import uk.ac.cam.cwf22.mg.graphics.*;
 import java.awt.*;
 import java.util.*;
 import java.awt.event.*;
-
 
 public class Test_MusicGenie
 {
@@ -23,44 +22,63 @@ public class Test_MusicGenie
 	 */
 	public static void main (String[] args) throws Exception
 	{
-		//create test wrapper
+		testProperties();
+		testDegree();
+		testNaming();
+		testKeyRoll();
+		//testAwt();
+		//test3D();
 		Test_MusicGenie t = new Test_MusicGenie();
-		
-		Degree d = new Degree("5bb#b");
-		p(""+d);
-		
-		//Properties p = System.getProperties();
-		
-		//p(""+p);
+	}
 	
+	private static void testProperties() {
+		Properties p = System.getProperties();
+		p(""+p);
+		String s = System.getProperty("user.dir");
+		p(s);
 	}
 		
-		
-	
-	
+	private static void testDegree() {
+		try {
+			Degree d = new Degree("5bb#b");
+			p(""+d);
+		}
+		catch (BadDegreeStringException e) {
+			p("degree failed");
+		}
+	}
+
 	private static void testNaming() 
 	{
-		
-		Color testc = new Color(300,400,500);
-		
+		Color testc = new Color(100,100,100);
 		String[] names = {"a", "a0" , "a1", "a2","a3"};
 		String test = "a";
 		String r = Genome.findNewUniqueName(test, names);
 		p(r);
-	
 	}
-	
-	
+		
+	private static void testKeyRoll() {
+		Key k = new Key(5);
+		p(k.toString());	
+		k.rollMode(-26);
+		p(k.toString());
+	}
+
+	public static void testAwt() {
+		Frame f = new Frame("Test awt function");
+		Button OK = new Button("Exit");	
+		f.add(OK);  //TODO this is failing on 2020 openjdk9, why?
+		f.setSize(200,150);
+		f.setLocation(20,220);
+		f.show();
+	}
+
 	private static void test3D() {
 		Frame f = new Frame();
 		f.show();
-		
 		TreeGraphics tg = new TreeGraphics(new VirtualRectangle(0,0,10,10), Color.white);
-		
 		f.add(tg);
-		
 		Vector ob3D = new Vector();
-		
 		for (double x = 0; x< 10; x++) {
 			for (double y=0; y<10; y++) {
 				for (double z=0; z<10; z++) 
@@ -72,33 +90,20 @@ public class Test_MusicGenie
 		tg.drawTree(ob3D);
 	}
 	
-	private static void testProperties() {
-		String p = System.getProperty("user.dir");
-		p(p);
-	}
-		
-		
-	//=======================
 	
-	/** wrapper to provide OK button at the end of th etest
+
+	/** wrapper to provide OK button at the end of the test
 	 */
 	public Test_MusicGenie() {
-		Frame f = new Frame("Test complete");
+		Frame f = new Frame("Test awt class");
 		Button OK = new Button("Exit");	
-		f.add(OK);
+		f.add(OK);  //TODO this is failing on 2020 openjdk9, why?
 		OK.addActionListener(new OKListen(f));
 		f.setSize(200,150);
 		f.setLocation(20,220);
 		f.show();
 	}
-	
-	/** shorthand for system.out.println
-	 */
-	private static void p(String s) {
-		System.out.println(s);
-	}
-	
-	/** class to listen for OK */
+
 	class OKListen implements ActionListener {
 		Frame f;
 		public OKListen(Frame f) {this.f=f;}
@@ -107,13 +112,15 @@ public class Test_MusicGenie
 			System.exit(7);
 		}
 	}
+
+
+
+
+	//=======================
 	
-	
-	private static void testKeyRoll() {
-		Key k = new Key(5);
-		p(k.toString());	
-		k.rollMode(-26);
-		p(k.toString());
+	/** shorthand for system.out.println
+	 */
+	private static void p(String s) {
+		System.out.println(s);
 	}
-	
 }
