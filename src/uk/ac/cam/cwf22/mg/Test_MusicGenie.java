@@ -164,7 +164,12 @@ public class Test_MusicGenie
                 MidiSystem.write(mySeq, type, file);
 
 
-                //play the sequence  TODO 2020 not working
+
+
+		//TODO 2020 not working, maybe JRE has no soundbank
+                //https://stackoverflow.com/questions/380103/simple-java-midi-example-not-producing-any-sound
+
+                //play the sequence  
                 Sequencer sequencer = MidiSystem.getSequencer();
                 sequencer.open();
                 sequencer.setSequence(mySeq);

@@ -1,1 +1,0 @@
-This is for playing with external files and experiomenting with MIDI commands
