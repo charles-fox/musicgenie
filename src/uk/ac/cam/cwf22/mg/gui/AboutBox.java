@@ -12,7 +12,7 @@ public class AboutBox extends Dialog
 	
 	String infoText; 
 	
-	static int ABOUTH=190, ABOUTW = 300;
+	static int ABOUTH=190, ABOUTW = 500;
 	
 	public AboutBox(Frame owner, Manager theManager) {
 		
@@ -22,7 +22,7 @@ public class AboutBox extends Dialog
 		
 		this.setBackground(SystemColor.menu);
 		
-		infoText = "  Music Genie\n (v."+theManager.versionInfo+")\n\n  Charles Fox, 1999-2000\n\n  A Computer Science Project\n  for Cambridge University\n\n  www.i.am/charlesfox";
+		infoText = "Music Genie (v."+theManager.versionInfo+")\nCharles Fox, 1999-2020\n\nUser guide:  https://github.com/charles-fox/musicgenie/blob/master/doc/userguide.pdf\n\nMusic Genie is free Software under the GPLv3 licence.\nDevelopment: https://github.com/charles-fox/musicgenie";
 		
 		//add a listener for the 'close' icon, to quit the application
 		//(using anonymous inner class!)
@@ -32,7 +32,6 @@ public class AboutBox extends Dialog
 								   }
 								}
 							   );
-		
 		
 		Panel p = new Panel(new BorderLayout());
 		this.add(p);
@@ -45,16 +44,14 @@ public class AboutBox extends Dialog
 		Dimension dim = tk.getScreenSize();
 		setLocation( (dim.width-ABOUTW)/2 , (dim.height-ABOUTH)/2);
 		
-		
-		
-		String imageName = "Charles.jpg";
-		fox = getImageFromFile(imageName);
-		FoxCanvas c = new FoxCanvas();
-		p.add("Center", c);
+//		String imageName = "Charles.jpg";
+//		fox = getImageFromFile(imageName);
+//		FoxCanvas c = new FoxCanvas();
+//		p.add("Center", c);
 		
 		Panel textOK = new Panel(new BorderLayout());
 		
-		TextArea info = new TextArea(infoText, 20,22,TextArea.SCROLLBARS_NONE);
+		TextArea info = new TextArea(infoText, 20,60,TextArea.SCROLLBARS_NONE);
 		info.setBackground(SystemColor.menu);
 		info.setEditable(false);
 		textOK.add("Center", info);

@@ -119,8 +119,8 @@ public class GenomeWindow extends Frame
 		MenuItem[] genomeItems = {new MenuItem("MIDI voices"),
 								  new MenuItem("Colour")};
 		
-		MenuItem[] helpItems = {new MenuItem("Symbols"),
-								new MenuItem("Online manual"),
+		MenuItem[] helpItems = {new MenuItem("Symbols"), 
+
 								new MenuItem("About")};
 		
 		
@@ -148,8 +148,8 @@ public class GenomeWindow extends Frame
 		genomeItems[1].addActionListener(new EditColorListen());
 		
 		helpItems[0].addActionListener(new SymbolHelpListen(this));
-		helpItems[1].addActionListener(new HelpListen(this));
-		helpItems[2].addActionListener(new AboutListen(this));
+		//helpItems[1].addActionListener(new HelpListen(this));
+		helpItems[1].addActionListener(new AboutListen(this));
 		
 		for (int i=0;i<fileItems.length;i++) fileMenu.add(fileItems[i]);
 		for (int i=0;i<mutateItems.length;i++) mutateMenu.add(mutateItems[i]);
@@ -202,14 +202,14 @@ public class GenomeWindow extends Frame
 		}
 	}
 	
-	/** listen for online help */
-	class HelpListen implements ActionListener {
+	
+	/*class HelpListen implements ActionListener {
 		Frame w;
 		public HelpListen(Frame w) {this.w=w;}
 		public void actionPerformed(ActionEvent e) {
-			ErrorBox eb = new ErrorBox("Online Help", "The Music Genie user guide, demos, and latest updates can all be found online at www.i.am/charlesfox\n\n (If the website has moved, search for 'Music Genie' and 'Charles Fox' on any good search engine)",w);
+			ErrorBox eb = new ErrorBox("test",w);
 		}
-	}
+	}*/
 	
 	/** listen for online help */
 	class SymbolHelpListen implements ActionListener {
