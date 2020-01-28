@@ -35,7 +35,7 @@ import javax.swing.*;
 import javax.swing.border.*;
 import javax.swing.table.*;
 import javax.swing.event.*;
-import javax.media.sound.midi.*;
+import javax.sound.midi.*;
 import java.util.Vector;
 
 import java.io.File;
