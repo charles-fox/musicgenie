@@ -1,0 +1,1 @@
+java -classpath D:\js\dev\ Test

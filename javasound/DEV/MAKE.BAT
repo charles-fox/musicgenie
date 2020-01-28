@@ -1,0 +1,1 @@
+javac -classpath D:\js\dev\ @source
