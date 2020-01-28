@@ -1,4 +1,4 @@
-JFLAGS = -g -d build/ -cp build/
+JFLAGS = -g -d build/ -classpath build/
 JC = javac $(JFLAGS)
 MG = src/uk/ac/cam/cwf22/mg/
 
