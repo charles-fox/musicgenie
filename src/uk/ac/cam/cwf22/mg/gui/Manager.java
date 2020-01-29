@@ -168,25 +168,11 @@ public class Manager
 	public void playScore(Score s) {
 		try {	
 
-			//2020 TESTING -- replace the desired score with a test score here
+			///////////////////////////////////////////////////////
+			System.out.println(s.toScoreString());
 
-                        Score testScore = new Score();
-                        Note n1 = new Note();
-                        testScore.addElement(n1);
-                        Note n3 = new Note();
-                        n3.voice = 2;
-                        n3.time = new Rational(5,1);
-                        testScore.addElement(n3);
-                        Note n2 = new Note();
-                        n2.degree = 5;
-                        n2.sharp = 0;
-                        n2.voice = 3;
-                        n2.time = new Rational(3,1);
-                        n2.duration = new Rational(3,5);
-                        testScore.addElement(n2);
-
-                        theScorePlayer.playScore(testScore);
-			//theScorePlayer.playScore(s);  // TODO causes MIDI error, why ?
+			theScorePlayer.playScore(s);  // TODO causes MIDI error, why ?
+			/////////////////////////////////////////////////////
 		}
 
 		catch (Exception e) {
