@@ -1,28 +1,18 @@
-/** Test class for midi package */
-
 import uk.ac.cam.cwf22.mg.midi.ScorePlayer;
 import uk.ac.cam.cwf22.mg.core.*;
-
 import javax.sound.midi.*;
 
 public class Test {
-
-	//main class - for component testing
 	public static void main(String[] args) throws MidiUnavailableException, InvalidMidiDataException {
-
 		try {
-
 			//make an instance of this class
 			ScorePlayer theScorePlayer = new ScorePlayer();
 
 			//initialise the voice list
-
 			theScorePlayer.setVoices();
 
 			//theScorePlayer.playDemo();
 			//instead of playDemo, lets make a MusicGenie score and play that
-
-
 
 			Score testScore = new Score();
 
@@ -34,7 +24,6 @@ public class Test {
 			n3.time = new Rational(5,1);
 			testScore.addElement(n3);
 
-
 			Note n2 = new Note();
 			n2.degree = 5;
 			n2.sharp = 0;
@@ -44,15 +33,12 @@ public class Test {
 			testScore.addElement(n2);
 */
 			theScorePlayer.playScore(testScore);
-
-			theScorePlayer.saveMIDI(testScore, "test.mid", "D:/js/dev/");
+			theScorePlayer.saveMIDI(testScore, "test.mid", "./");
 
 			//wait for playing
 			for (int i=0; i<5000; i++) {p(""+i);}
 			p("finished playing");
-
 			theScorePlayer.close();
-
 			System.exit(0);
 		}
 		catch (Exception e) {
@@ -60,12 +46,9 @@ public class Test {
 			System.exit(1);
 		}
 	}
-
 	public Test() {
 	}
-
 	private static void p(String s) {
 		System.out.println(s);
 	}
-
 }
