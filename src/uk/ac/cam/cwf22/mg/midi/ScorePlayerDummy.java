@@ -16,7 +16,7 @@ public class ScorePlayerDummy
 	//MusicGenie pitches have 0 as middle C, so shift appropriately
 	public int  pitchShift = 50;
 	
-	public ScorePlayer() throws Exception {
+	public ScorePlayerDummy() throws Exception {
 		System.out.println("Dummy Scoreplayer constructor caller");
 	}
 	
