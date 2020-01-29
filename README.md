@@ -13,21 +13,21 @@ The moral of this story, I think, is:   When I wrote this in 1999, it seemed tha
 To run MusicGenie on Ubuntu 16.04:
 
 First install Fluidsynth, which is a MIDI synthesizer to make the sounds:
-
+```
 sudo apt install fludsynth
 
 sudo apt install fluid-soundfont-gm
-
+```
 (Maybe need to restart your machine here so that fluid gets run).
 
 Then clone, build, and run MusicGenie with:
-
+```
 git clone https://github.com/charles-fox/musicgenie.git
 
 make
 
 java -classpath build/ uk.ac.cam.cwf22.mg.MusicGenie
 
-
+```
 
 
