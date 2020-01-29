@@ -22,7 +22,7 @@ sudo apt install fluid-soundfont-gm
 
 Then clone, build, and run MusicGenie with:
 
-git clone git clone https://github.com/charles-fox/musicgenie.git
+git clone https://github.com/charles-fox/musicgenie.git
 
 make
 
