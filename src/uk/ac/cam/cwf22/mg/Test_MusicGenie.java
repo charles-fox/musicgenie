@@ -220,7 +220,7 @@ public class Test_MusicGenie
                         theScorePlayer.saveMIDI(testScore, "testScorePlayer.mid", "./");
 
                         //wait for playing
-                        for (int i=0; i<50000; i++) {p(""+i);}
+                        for (int i=0; i<500000; i++) {p(""+i);}
                         p("finished playing");
                         theScorePlayer.close();
                         System.exit(0);

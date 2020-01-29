@@ -12,3 +12,6 @@ all: $(MG)/*/*.java
 
 #to run:
 #	java -classpath build/ uk.ac.cam.cwf22.mg.MusicGenie
+
+#to run unit tests:
+#	java -classpath build/ uk.ac.cam.cwf22.mg.Test_MusicGenie
