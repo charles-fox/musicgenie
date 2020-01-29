@@ -1,7 +1,7 @@
 package uk.ac.cam.cwf22.mg;
 
 /**
- * TEST HARNESS
+ * Unit tests for MusicGenie 
  */
 
 import uk.ac.cam.cwf22.mg.core.*;
@@ -18,15 +18,8 @@ import javax.sound.midi.*;
 import java.net.*;
 import java.io.*;
 
-
 public class Test_MusicGenie
 {
-	/**
-	 * The main entry point for the TEST application. 
-	 *
-	 * @param args Array of parameters passed to the application
-	 * via the command line.
-	 */
 	public static void main (String[] args) throws Exception
 	{
 		testProperties();
@@ -99,8 +92,6 @@ public class Test_MusicGenie
 		tg.drawTree(ob3D);
 	}
 	
-	
-
 	/** wrapper to provide OK button at the end of the test
 	 */
 	public Test_MusicGenie() {
@@ -121,7 +112,6 @@ public class Test_MusicGenie
 			System.exit(7);
 		}
 	}
-
 
 
 //sudo apt install fludsynth
@@ -189,24 +179,18 @@ public class Test_MusicGenie
 
 	public static void testScorePlayer() {
                 try {
-                        //make an instance of this class
                         ScorePlayer theScorePlayer = new ScorePlayer();
 
                         //initialise the voice list
                         theScorePlayer.setVoices();
 
-                        //theScorePlayer.playDemo();
-                        //instead of playDemo, lets make a MusicGenie score and play that
-
                         Score testScore = new Score();
-
                         Note n1 = new Note();
                         testScore.addElement(n1);
                         Note n3 = new Note();
                         n3.voice = 2;
                         n3.time = new Rational(5,1);
                         testScore.addElement(n3);
-
                         Note n2 = new Note();
                         n2.degree = 5;
                         n2.sharp = 0;
@@ -214,8 +198,8 @@ public class Test_MusicGenie
                         n2.time = new Rational(3,1);
                         n2.duration = new Rational(3,5);
                         testScore.addElement(n2);
-                        theScorePlayer.playScore(testScore);
-
+                        
+			theScorePlayer.playScore(testScore);
                         theScorePlayer.saveMIDI(testScore, "testScorePlayer.mid", "./");
 
                         //wait for playing

@@ -1,7 +1,14 @@
 #sudo apt-get install default-jdk
 #openjdk9 does not work, awt button add is broken, see Tests
 
-#possibly we need to install fluidsynth for the sound to work
+#possibly we need to install fluidsynth and a soudfont, and reboot the machine, for MIDI to work?  (reboot so that fluid autostarts and is picked up by the alsa MIDI system?)
+#sudo apt install fludsynth
+#sudo apt install fluid-soundfont-gm
+
+#to play a MIDI file in fluid from the command line:
+#fluidsynth --audio-driver=alsa -o audio.alsa.device=hw:1 /usr/share/sounds/sf2/FluidR3_GM.sf2 mid.mid
+
+
 
 JFLAGS = -g -d build/ -classpath build/
 JC = javac $(JFLAGS)

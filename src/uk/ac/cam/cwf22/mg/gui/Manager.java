@@ -9,15 +9,11 @@ import java.util.Vector;
 import java.io.*;
 import java.awt.*;
 
-
 import uk.ac.cam.cwf22.mg.core.*;
 import uk.ac.cam.cwf22.mg.compiler.*;
 import uk.ac.cam.cwf22.mg.midi.*;
 
-
 public class Manager  
-				
-
 {
 	//whether to mutate as well as crossbreed midi voices
 	public boolean MUTATE_VOICES = true;
@@ -46,8 +42,8 @@ public class Manager
 	
 	//text for help menu
 	public static String 
-		versionInfo = "2000-04-19",
-		aboutText = "Music Genie "+versionInfo+"\nA Cambridge Computer Science Tripos project\nCharles Fox, Clare College, 1999-2000\nwww.i.am/charlesfox";
+		versionInfo = "2020-01-28",
+		aboutText = "Music Genie "+versionInfo+"\n";
 		
 	public static int
 		PIANO = 1,
@@ -67,8 +63,6 @@ public class Manager
 		ORGAN = 17,
 		GUITAR = 25;
 		
-		
-	
 	public static int[] DEFAULT_VOICES = {PIANO,
 										  HARPSICHORD,
 										  VIBES,
@@ -172,11 +166,46 @@ public class Manager
 	 *  the only way is to call it through this manager.
 	 * */
 	public void playScore(Score s) {
-		try {
-			theScorePlayer.playScore(s);
+		try {	
+
+			//2020 TESTING -- replace the desired score with a test score here
+			//  ScorePlayer theScorePlayer = new ScorePlayer();
+
+                        //initialise the voice list
+                        theScorePlayer.setVoices();
+
+                        Score testScore = new Score();
+                        Note n1 = new Note();
+                        testScore.addElement(n1);
+                        Note n3 = new Note();
+                        n3.voice = 2;
+                        n3.time = new Rational(5,1);
+                        testScore.addElement(n3);
+                        Note n2 = new Note();
+                        n2.degree = 5;
+                        n2.sharp = 0;
+                        n2.voice = 3;
+                        n2.time = new Rational(3,1);
+                        n2.duration = new Rational(3,5);
+                        testScore.addElement(n2);
+
+                        theScorePlayer.playScore(testScore);
+                        theScorePlayer.saveMIDI(testScore, "testScorePlayer.mid", "./");
+
+                        //wait for playing
+                        for (int i=0; i<500000; i++) {System.out.println(""+i);}
+                        System.out.println("finished playing");
+                        theScorePlayer.close();
+                        System.exit(0);
+
+
+
+			//theScorePlayer.playScore(s);
+			theScorePlayer.playScore(testScore);
 		}
+
 		catch (Exception e) {
-			this.reportException("MIDI system error\n");
+			this.reportException("MIDI system error aa\n");
 		
 		}
 	}
