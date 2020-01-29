@@ -202,7 +202,6 @@ public class Test_MusicGenie
 
                         Note n1 = new Note();
                         testScore.addElement(n1);
-/*
                         Note n3 = new Note();
                         n3.voice = 2;
                         n3.time = new Rational(5,1);
@@ -215,8 +214,8 @@ public class Test_MusicGenie
                         n2.time = new Rational(3,1);
                         n2.duration = new Rational(3,5);
                         testScore.addElement(n2);
-*/
                         theScorePlayer.playScore(testScore);
+
                         theScorePlayer.saveMIDI(testScore, "testScorePlayer.mid", "./");
 
                         //wait for playing

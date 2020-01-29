@@ -1,6 +1,8 @@
 #sudo apt-get install default-jdk
 #openjdk9 does not work, awt button add is broken, see Tests
 
+#possibly we need to install fluidsynth for the sound to work
+
 JFLAGS = -g -d build/ -classpath build/
 JC = javac $(JFLAGS)
 MG = src/uk/ac/cam/cwf22/mg/
