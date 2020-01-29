@@ -1,5 +1,5 @@
 # musicgenie
-Genetic Hierarchical Music Structres - human and automated music composition tool.
+Genetic Hierarchical Music Structures - human and automated music composition tool.
 
 From the paper,
 Fox, C. (2006). Genetic Hierarchical Music Structures. In FLAIRS Conference (pp. 243-247).
