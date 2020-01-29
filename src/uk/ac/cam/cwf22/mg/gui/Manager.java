@@ -169,10 +169,6 @@ public class Manager
 		try {	
 
 			//2020 TESTING -- replace the desired score with a test score here
-			//  ScorePlayer theScorePlayer = new ScorePlayer();
-
-                        //initialise the voice list
-                        theScorePlayer.setVoices();
 
                         Score testScore = new Score();
                         Note n1 = new Note();
@@ -190,18 +186,7 @@ public class Manager
                         testScore.addElement(n2);
 
                         theScorePlayer.playScore(testScore);
-                        theScorePlayer.saveMIDI(testScore, "testScorePlayer.mid", "./");
-
-                        //wait for playing
-                        for (int i=0; i<500000; i++) {System.out.println(""+i);}
-                        System.out.println("finished playing");
-                        theScorePlayer.close();
-                        System.exit(0);
-
-
-
-			//theScorePlayer.playScore(s);
-			theScorePlayer.playScore(testScore);
+			//theScorePlayer.playScore(s);  // TODO causes MIDI error, why ?
 		}
 
 		catch (Exception e) {
