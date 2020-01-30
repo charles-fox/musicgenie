@@ -12,8 +12,10 @@ The moral of this story, I think, is:   When I wrote this in 1999, it seemed tha
 
 To run MusicGenie on Ubuntu 16.04:
 
-First install Fluidsynth, which is a MIDI synthesizer to make the sounds:
+First install OpenJDK8 (this does not work on OpenJDK9 due to an awt bug in OpenJDK9), and Fluidsynth, which is a MIDI synthesizer to make the sounds:
 ```
+sudo apt-get install default-jdk
+
 sudo apt install fludsynth
 
 sudo apt install fluid-soundfont-gm
