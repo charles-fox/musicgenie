@@ -16,7 +16,7 @@ First install OpenJDK8 (this does not work on OpenJDK9 due to an awt bug in Open
 ```
 sudo apt-get install default-jdk
 
-sudo apt install fludsynth
+sudo apt install fluidsynth
 
 sudo apt install fluid-soundfont-gm
 ```
